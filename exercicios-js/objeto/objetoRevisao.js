@@ -1,5 +1,4 @@
-// * Coleção dinâmica de pares chave/valor
-
+// Coleção dinâmica de pares chave/valor
 const produto = new Object
 produto.nome = 'Cadeira'
 produto['marca do produto'] = 'Generica'
@@ -15,10 +14,23 @@ const carro = {
     valor: 89000,
     proprietario: {
         nome: 'Raul',
-        idade: 56,
+        idade: 50,
         endereco: {
             logradouro: 'Rua ABC',
             numero: 123
         }
+    },
+    condutores: [{
+        nome: 'Junior',
+        idade: 19
+    }, {
+        nome: 'Ana',
+        idade: 42
+    }],
+    calcularValorSeguro() {
+        //...
     }
 }
+
+carro.proprietario.endereco.numero = 1000
+console.log(carro)
