@@ -15,7 +15,16 @@
     <div id="post"></div>
 
     <script>
-        // ...
+        function exibirResultado(id, dados) {
+            const texto = JSON.stringify(dados)
+            document.querySelector('#id').innerHTML = texto
+        }
+
+        axios.get('parOuImpar', {
+            params: {
+                numero: 6
+            }
+        }).then(resp => exibirResultado('get', resp.data))
     </script>
 </body>
 </html>
